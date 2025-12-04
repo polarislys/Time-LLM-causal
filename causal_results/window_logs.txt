@@ -1,0 +1,105 @@
+<window_log length='512'>
+  <statistics>
+    HUFL: mean=10.40, std=2.59, range=[4.22, 19.16], volatility=medium
+    HULL: mean=3.68, std=1.42, range=[0.54, 8.84], volatility=high
+    MUFL: mean=7.16, std=2.24, range=[1.28, 14.68], volatility=high
+    MULL: mean=1.71, std=0.98, range=[-0.75, 4.19], volatility=high
+    LUFL: mean=3.16, std=0.84, range=[1.37, 5.82], volatility=medium
+    LULL: mean=1.42, std=0.40, range=[0.67, 3.05], volatility=medium
+    OT: mean=30.97, std=4.81, range=[16.88, 40.94], volatility=medium
+  </statistics>
+  <trends>
+    HUFL: ↑ strongly rising (+111.5%)
+    HULL: ↑ strongly rising (+100.0%)
+    MUFL: ↑ strongly rising (+364.5%)
+    MULL: ↑ strongly rising (+438.3%)
+    LUFL: ↑ strongly rising (+16.7%)
+    LULL: ↑ strongly rising (+31.9%)
+    OT: ↑ strongly rising (+26.5%)
+  </trends>
+  <anomalies>
+    HUFL: 31 anomalies (6.1%, max_z=3.4σ)
+    HULL: 6 anomalies (1.2%, max_z=3.6σ)
+    MUFL: 46 anomalies (9.0%, max_z=3.4σ)
+    MULL: 16 anomalies (3.1%, max_z=2.5σ)
+    LUFL: 34 anomalies (6.6%, max_z=3.2σ)
+    LULL: 6 anomalies (1.2%, max_z=4.1σ)
+    OT: 35 anomalies (6.8%, max_z=2.9σ)
+  </anomalies>
+  <correlations>
+    HUFL ↔ MUFL (+0.94)
+    HULL ↔ MULL (+0.94)
+  </correlations>
+</window_log>
+
+<window_log length='512'>
+  <statistics>
+    HUFL: mean=13.72, std=3.77, range=[2.28, 22.30], volatility=medium
+    HULL: mean=3.71, std=1.71, range=[-0.40, 8.24], volatility=high
+    MUFL: mean=9.52, std=2.97, range=[0.00, 16.42], volatility=high
+    MULL: mean=1.66, std=1.72, range=[-2.17, 5.33], volatility=high
+    LUFL: mean=4.11, std=1.23, range=[1.71, 7.89], volatility=medium
+    LULL: mean=1.26, std=0.25, range=[0.67, 1.98], volatility=medium
+    OT: mean=36.59, std=3.93, range=[27.86, 46.01], volatility=medium
+  </statistics>
+  <trends>
+    HUFL: ↑ strongly rising (+33.1%)
+    HULL: ↑ strongly rising (+29.8%)
+    MUFL: ↑ strongly rising (+14.0%)
+    MULL: ↑ strongly rising (+41.3%)
+    LUFL: ↑ strongly rising (+44.1%)
+    LULL: ↑ strongly rising (+13.2%)
+    OT: ↓ strongly falling (-12.5%)
+  </trends>
+  <anomalies>
+    HUFL: 40 anomalies (7.8%, max_z=3.0σ)
+    HULL: 16 anomalies (3.1%, max_z=2.6σ)
+    MUFL: 41 anomalies (8.0%, max_z=3.2σ)
+    MULL: 11 anomalies (2.1%, max_z=2.2σ)
+    LUFL: 19 anomalies (3.7%, max_z=3.1σ)
+    LULL: 23 anomalies (4.5%, max_z=2.9σ)
+    OT: 19 anomalies (3.7%, max_z=2.4σ)
+  </anomalies>
+  <correlations>
+    HUFL ↔ MUFL (+0.96)
+    HUFL ↔ LUFL (+0.72)
+    HULL ↔ MULL (+0.94)
+    LUFL ↔ LULL (+0.79)
+  </correlations>
+</window_log>
+
+<window_log length='512'>
+  <statistics>
+    HUFL: mean=12.95, std=3.50, range=[6.30, 23.64], volatility=medium
+    HULL: mean=5.05, std=1.09, range=[2.41, 8.57], volatility=medium
+    MUFL: mean=9.17, std=2.66, range=[4.26, 17.34], volatility=medium
+    MULL: mean=3.07, std=0.85, range=[0.82, 5.58], volatility=medium
+    LUFL: mean=3.72, std=1.36, range=[1.58, 7.52], volatility=high
+    LULL: mean=1.23, std=0.28, range=[0.55, 2.13], volatility=medium
+    OT: mean=29.41, std=3.68, range=[20.33, 39.04], volatility=medium
+  </statistics>
+  <trends>
+    HUFL: ↓ falling (-6.4%)
+    HULL: ↑ strongly rising (+10.9%)
+    MUFL: ↑ rising (+5.8%)
+    MULL: ↑ strongly rising (+15.7%)
+    LUFL: ↓ strongly falling (-36.4%)
+    LULL: ↓ strongly falling (-20.0%)
+    OT: ↓ strongly falling (-23.3%)
+  </trends>
+  <anomalies>
+    HUFL: 14 anomalies (2.7%, max_z=3.1σ)
+    HULL: 16 anomalies (3.1%, max_z=3.2σ)
+    MUFL: 12 anomalies (2.3%, max_z=3.1σ)
+    MULL: 22 anomalies (4.3%, max_z=3.0σ)
+    LUFL: 18 anomalies (3.5%, max_z=2.8σ)
+    LULL: 13 anomalies (2.5%, max_z=3.2σ)
+    OT: 16 anomalies (3.1%, max_z=2.6σ)
+  </anomalies>
+  <correlations>
+    HUFL ↔ MUFL (+0.93)
+    HUFL ↔ LUFL (+0.76)
+    HULL ↔ MULL (+0.85)
+    LUFL ↔ LULL (+0.82)
+  </correlations>
+</window_log>

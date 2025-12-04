@@ -4,6 +4,7 @@ from accelerate import Accelerator, DeepSpeedPlugin
 from accelerate import DistributedDataParallelKwargs
 from torch import optim
 from torch.optim import lr_scheduler
+from utils.experiment_logger import setup_experiment_logger
 
 from data_provider.m4 import M4Meta
 from models import Autoformer, DLinear, TimeLLM
@@ -125,6 +126,12 @@ for ii in range(args.itr):
         args.factor,
         args.embed,
         args.des, ii)
+    
+    # ========== 设置实验日志管理器 ==========
+    exp_logger = setup_experiment_logger(args, accelerator)
+    exp_logger.info(f"Experiment Setting: {setting}")
+    exp_logger.info(f"Training iteration: {ii + 1}/{args.itr}")
+    # ========================================
 
     if args.data == 'm4':
         args.pred_len = M4Meta.horizons_map[args.seasonal_patterns]  # Up to M4 config
@@ -202,12 +209,16 @@ for ii in range(args.itr):
             train_loss.append(loss.item())
 
             if (i + 1) % 100 == 0:
-                accelerator.print(
-                    "\titers: {0}, epoch: {1} | loss: {2:.7f}".format(i + 1, epoch + 1, loss.item())
-                )
                 speed = (time.time() - time_now) / iter_count
                 left_time = speed * ((args.train_epochs - epoch) * train_steps - i)
-                accelerator.print('\tspeed: {:.4f}s/iter; left time: {:.4f}s'.format(speed, left_time))
+                exp_logger.log_iteration(
+                    epoch=epoch + 1,
+                    iteration=i + 1,
+                    total_iterations=train_steps,
+                    loss=loss.item(),
+                    speed=speed,
+                    left_time=left_time
+                )
                 iter_count = 0
                 time_now = time.time()
 
@@ -218,22 +229,34 @@ for ii in range(args.itr):
                 adjust_learning_rate(accelerator, model_optim, scheduler, epoch + 1, args, printout=False)
                 scheduler.step()
 
-        accelerator.print("Epoch: {} cost time: {}".format(epoch + 1, time.time() - epoch_time))
+        epoch_duration = time.time() - epoch_time
         train_loss = np.average(train_loss)
         vali_loss = test(args, accelerator, model, train_loader, vali_loader, criterion)
         test_loss = vali_loss
-        accelerator.print(
-            "Epoch: {0}, Steps: {1} | Train Loss: {2:.7f} Vali Loss: {3:.7f} Test Loss: {4:.7f}".format(
-                epoch + 1, train_steps, train_loss, vali_loss, test_loss))
+        
+        # 使用实验日志记录器记录epoch结果
+        exp_logger.log_epoch(
+            epoch=epoch + 1,
+            train_loss=train_loss,
+            vali_loss=vali_loss,
+            test_loss=test_loss,
+            epoch_time=epoch_duration,
+            learning_rate=model_optim.param_groups[0]['lr']
+        )
+        
         early_stopping(vali_loss, model, path)  # model saving
         if early_stopping.early_stop:
-            accelerator.print("Early stopping")
+            exp_logger.info("Early stopping triggered")
+            exp_logger.save_results(early_stop_epoch=epoch + 1)
             break
 
         if args.lradj != 'TST':
             adjust_learning_rate(accelerator, model_optim, scheduler, epoch + 1, args, printout=True)
         else:
-            accelerator.print('Updating learning rate to {}'.format(scheduler.get_last_lr()[0]))
+            exp_logger.info('Updating learning rate to {}'.format(scheduler.get_last_lr()[0]))
+    else:
+        # 训练正常结束（未触发early stopping）
+        exp_logger.save_results()
 
     best_model_path = path + '/' + 'checkpoint'
     accelerator.wait_for_everyone()

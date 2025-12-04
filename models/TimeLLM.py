@@ -8,6 +8,7 @@ from transformers import LlamaConfig, LlamaModel, LlamaTokenizer, GPT2Config, GP
 from layers.Embed import PatchEmbedding
 import transformers
 from layers.StandardNorm import Normalize
+from layers.CausalModule import CausalModule
 
 transformers.logging.set_verbosity_error()
 
@@ -42,7 +43,7 @@ class Model(nn.Module):
 
         if configs.llm_model == 'LLAMA':
             # self.llama_config = LlamaConfig.from_pretrained('/mnt/alps/modelhub/pretrained_model/LLaMA/7B_hf/')
-            self.llama_config = LlamaConfig.from_pretrained('huggyllama/llama-7b')
+            self.llama_config = LlamaConfig.from_pretrained('huggyllama/llama-7b', cache_dir=configs.llm_cache_dir)
             self.llama_config.num_hidden_layers = configs.llm_layers
             self.llama_config.output_attentions = True
             self.llama_config.output_hidden_states = True
@@ -53,6 +54,7 @@ class Model(nn.Module):
                     trust_remote_code=True,
                     local_files_only=True,
                     config=self.llama_config,
+                    cache_dir=configs.llm_cache_dir,
                     # load_in_4bit=True
                 )
             except EnvironmentError:  # downloads model from HF is not already done
@@ -63,6 +65,7 @@ class Model(nn.Module):
                     trust_remote_code=True,
                     local_files_only=False,
                     config=self.llama_config,
+                    cache_dir=configs.llm_cache_dir,
                     # load_in_4bit=True
                 )
             try:
@@ -70,7 +73,8 @@ class Model(nn.Module):
                     # "/mnt/alps/modelhub/pretrained_model/LLaMA/7B_hf/tokenizer.model",
                     'huggyllama/llama-7b',
                     trust_remote_code=True,
-                    local_files_only=True
+                    local_files_only=True,
+                    cache_dir=configs.llm_cache_dir,
                 )
             except EnvironmentError:  # downloads the tokenizer from HF if not already done
                 print("Local tokenizer files not found. Atempting to download them..")
@@ -78,10 +82,11 @@ class Model(nn.Module):
                     # "/mnt/alps/modelhub/pretrained_model/LLaMA/7B_hf/tokenizer.model",
                     'huggyllama/llama-7b',
                     trust_remote_code=True,
-                    local_files_only=False
+                    local_files_only=False,
+                    cache_dir=configs.llm_cache_dir,
                 )
         elif configs.llm_model == 'GPT2':
-            self.gpt2_config = GPT2Config.from_pretrained('openai-community/gpt2')
+            self.gpt2_config = GPT2Config.from_pretrained('openai-community/gpt2', cache_dir=configs.llm_cache_dir)
 
             self.gpt2_config.num_hidden_layers = configs.llm_layers
             self.gpt2_config.output_attentions = True
@@ -92,6 +97,7 @@ class Model(nn.Module):
                     trust_remote_code=True,
                     local_files_only=True,
                     config=self.gpt2_config,
+                    cache_dir=configs.llm_cache_dir,
                 )
             except EnvironmentError:  # downloads model from HF is not already done
                 print("Local model files not found. Attempting to download...")
@@ -100,23 +106,26 @@ class Model(nn.Module):
                     trust_remote_code=True,
                     local_files_only=False,
                     config=self.gpt2_config,
+                    cache_dir=configs.llm_cache_dir,
                 )
 
             try:
                 self.tokenizer = GPT2Tokenizer.from_pretrained(
                     'openai-community/gpt2',
                     trust_remote_code=True,
-                    local_files_only=True
+                    local_files_only=True,
+                    cache_dir=configs.llm_cache_dir,
                 )
             except EnvironmentError:  # downloads the tokenizer from HF if not already done
                 print("Local tokenizer files not found. Atempting to download them..")
                 self.tokenizer = GPT2Tokenizer.from_pretrained(
                     'openai-community/gpt2',
                     trust_remote_code=True,
-                    local_files_only=False
+                    local_files_only=False,
+                    cache_dir=configs.llm_cache_dir,
                 )
         elif configs.llm_model == 'BERT':
-            self.bert_config = BertConfig.from_pretrained('google-bert/bert-base-uncased')
+            self.bert_config = BertConfig.from_pretrained('google-bert/bert-base-uncased', cache_dir=configs.llm_cache_dir)
 
             self.bert_config.num_hidden_layers = configs.llm_layers
             self.bert_config.output_attentions = True
@@ -127,6 +136,7 @@ class Model(nn.Module):
                     trust_remote_code=True,
                     local_files_only=True,
                     config=self.bert_config,
+                    cache_dir=configs.llm_cache_dir,
                 )
             except EnvironmentError:  # downloads model from HF is not already done
                 print("Local model files not found. Attempting to download...")
@@ -135,20 +145,23 @@ class Model(nn.Module):
                     trust_remote_code=True,
                     local_files_only=False,
                     config=self.bert_config,
+                    cache_dir=configs.llm_cache_dir,
                 )
 
             try:
                 self.tokenizer = BertTokenizer.from_pretrained(
                     'google-bert/bert-base-uncased',
                     trust_remote_code=True,
-                    local_files_only=True
+                    local_files_only=True,
+                    cache_dir=configs.llm_cache_dir,
                 )
             except EnvironmentError:  # downloads the tokenizer from HF if not already done
                 print("Local tokenizer files not found. Atempting to download them..")
                 self.tokenizer = BertTokenizer.from_pretrained(
                     'google-bert/bert-base-uncased',
                     trust_remote_code=True,
-                    local_files_only=False
+                    local_files_only=False,
+                    cache_dir=configs.llm_cache_dir,
                 )
         else:
             raise Exception('LLM model is not defined')
@@ -188,7 +201,12 @@ class Model(nn.Module):
                                                  head_dropout=configs.dropout)
         else:
             raise NotImplementedError
-
+        # 因果模块
+        self.use_causal = getattr(configs, 'use_causal', False)
+        if self.use_causal:
+            self.causal_module = CausalModule(configs)
+            # 因果token的数量
+            self.n_causal_tokens = configs.enc_in
         self.normalize_layers = Normalize(configs.enc_in, affine=False)
 
     def forward(self, x_enc, x_mark_enc, x_dec, x_mark_dec, mask=None):
@@ -209,7 +227,10 @@ class Model(nn.Module):
         medians = torch.median(x_enc, dim=1).values
         lags = self.calcute_lags(x_enc)
         trends = x_enc.diff(dim=1).sum(dim=1)
-
+        # 获取因果知识提示
+        causal_prompt_text = ""
+        if self.use_causal and hasattr(self, 'causal_module'):
+            causal_prompt_text = self.causal_module.get_causal_prompt(format_type='compact')
         prompt = []
         for b in range(x_enc.shape[0]):
             min_values_str = str(min_values[b].tolist()[0])
@@ -218,6 +239,7 @@ class Model(nn.Module):
             lags_values_str = str(lags[b].tolist())
             prompt_ = (
                 f"<|start_prompt|>Dataset description: {self.description}"
+                f"{' ' + causal_prompt_text if causal_prompt_text else ''}"
                 f"Task description: forecast the next {str(self.pred_len)} steps given the previous {str(self.seq_len)} steps information; "
                 "Input statistics: "
                 f"min value {min_values_str}, "
@@ -240,6 +262,13 @@ class Model(nn.Module):
         enc_out, n_vars = self.patch_embedding(x_enc.to(torch.bfloat16))
         enc_out = self.reprogramming_layer(enc_out, source_embeddings, source_embeddings)
         llama_enc_out = torch.cat([prompt_embeddings, enc_out], dim=1)
+        # 整合因果soft tokens
+        if self.use_causal and hasattr(self, 'causal_module'):
+            causal_tokens = self.causal_module.forward(B * N).to(x_enc.device).to(torch.bfloat16)
+            # 拼接: [prompt_embeddings, causal_tokens, enc_out]
+            llama_enc_out = torch.cat([prompt_embeddings, causal_tokens, enc_out], dim=1)
+        else:
+            llama_enc_out = torch.cat([prompt_embeddings, enc_out], dim=1)
         dec_out = self.llm_model(inputs_embeds=llama_enc_out).last_hidden_state
         dec_out = dec_out[:, :, :self.d_ff]
 
