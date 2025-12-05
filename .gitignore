@@ -8,3 +8,4 @@ dataset/
 .idea/
 *.log
 .DS_Store
+checkpoints/**/checkpoint
