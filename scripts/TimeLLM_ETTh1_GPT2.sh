@@ -11,14 +11,14 @@ export TMPDIR="/home/nl/disk_8T/lys/tmp"
 mkdir -p "$HF_HOME" "$TORCH_HOME" "$TMPDIR"
 
 model_name=TimeLLM
-train_epochs=15
+train_epochs=20
 dropout=0.3
 learning_rate=0.005
 gpt2_layers=12
 
 master_port=00097
 num_process=1  # 改为你的GPU数量
-batch_size=24
+batch_size=16
 d_model=32
 d_ff=128
 
@@ -48,13 +48,12 @@ accelerate launch --mixed_precision bf16 run_main.py \
   --batch_size $batch_size \
   --learning_rate $learning_rate \
   --dropout 0.3 \
-  --lradj 'COS' \
   --llm_model GPT2 \
   --llm_dim 768 \
   --llm_layers $gpt2_layers \
   --llm_cache_dir /home/nl/disk_8T/lys/cache/huggingface \
   --train_epochs $train_epochs \
-  --patience 5 \
+  --patience 10 \
   --model_comment $comment
 
 # # 预测长度 192
