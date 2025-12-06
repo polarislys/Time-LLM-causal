@@ -356,3 +356,52 @@ class CausalModule(nn.Module):
         soft_tokens = self.forward(batch_size)
         text_prompt = self.get_causal_prompt(format_type='compact')
         return soft_tokens, text_prompt
+
+    def get_adaptive_causal_prompt(self, trends: torch.Tensor) -> List[str]:
+        """
+        生成自适应因果 prompt
+        Args:
+            trends: (batch, n_vars) 每个变量的趋势
+        Returns:
+            prompts: list of str，每个样本一个prompt
+        """
+        if self.text_generator is None or not self.causal_relationships:
+            return [""] * trends.shape[0]
+            
+        batch_size = trends.shape[0]
+        prompts = []
+        
+        # 将 trends 转换为 numpy
+        trends_np = trends.detach().cpu().numpy()
+        
+        for b in range(batch_size):
+            # 筛选与当前趋势匹配的因果关系
+            active_rels = []
+            for rel in self.causal_relationships:
+                # 找到索引
+                if rel['cause'] in self.var_names:
+                    cause_idx = self.var_names.index(rel['cause'])
+                    strength = rel['strength']
+                    
+                    # 检查原因变量的趋势
+                    cause_trend = trends_np[b, cause_idx]
+                    
+                    # 如果原因变量有显著趋势，且因果强度足够
+                    if abs(cause_trend) > 0.01 and abs(strength) > 0.1:
+                        # 预测结果变量的趋势
+                        expected_effect_trend = "increase" if strength * cause_trend > 0 else "decrease"
+                        cause_dir = "increases" if cause_trend > 0 else "decreases"
+                        
+                        active_rels.append(f"Since {rel['cause']} {cause_dir}, {rel['effect']} is likely to {expected_effect_trend}")
+            
+            # 只保留前 5 个最相关的
+            if active_rels:
+                # 按相关性排序（这里简单取前几个）
+                prompt = "Adaptive Causal: " + "; ".join(active_rels[:5])
+            else:
+                # 如果没有激活的因果，回退到静态 prompt
+                prompt = self.get_causal_prompt(format_type='compact')
+                
+            prompts.append(prompt)
+            
+        return prompts

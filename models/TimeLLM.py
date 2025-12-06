@@ -227,16 +227,23 @@ class Model(nn.Module):
         medians = torch.median(x_enc, dim=1).values
         lags = self.calcute_lags(x_enc)
         trends = x_enc.diff(dim=1).sum(dim=1)
-        # 获取因果知识提示
-        causal_prompt_text = ""
+        
+        # 获取因果知识提示（自适应或静态）
+        causal_prompt_list = [""] * (B * N)
         if self.use_causal and hasattr(self, 'causal_module'):
-            causal_prompt_text = self.causal_module.get_causal_prompt(format_type='compact')
+            # 使用自适应 prompt：根据每个样本的趋势生成
+            causal_prompt_list = self.causal_module.get_adaptive_causal_prompt(trends)
+        
         prompt = []
         for b in range(x_enc.shape[0]):
             min_values_str = str(min_values[b].tolist()[0])
             max_values_str = str(max_values[b].tolist()[0])
             median_values_str = str(medians[b].tolist()[0])
             lags_values_str = str(lags[b].tolist())
+            
+            # 获取当前样本的因果 prompt
+            causal_prompt_text = causal_prompt_list[b]
+            
             prompt_ = (
                 f"<|start_prompt|>Dataset description: {self.description}"
                 f"{' ' + causal_prompt_text if causal_prompt_text else ''}"
