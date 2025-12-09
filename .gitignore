@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+*.pth
+checkpoints/*.pth
+logs/
+dataset/
+.vscode/
+.idea/
+*.log
+.DS_Store
+checkpoints/**/checkpoint
