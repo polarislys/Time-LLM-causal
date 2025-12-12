@@ -1,0 +1,3 @@
+2025-12-12 15:18:54 | INFO | Config saved to ./logs/TimeLLM_ETTh1_TimeLLM-ETTh1-GPT2_20251212_151854/config.json
+2025-12-12 15:18:54 | INFO | Experiment Setting: long_term_forecast_ETTh1_512_96_TimeLLM_ETTh1_ftM_sl512_ll48_pl96_dm32_nh8_el2_dl1_df128_fc3_ebtimeF_Exp_0
+2025-12-12 15:18:54 | INFO | Training iteration: 1/1

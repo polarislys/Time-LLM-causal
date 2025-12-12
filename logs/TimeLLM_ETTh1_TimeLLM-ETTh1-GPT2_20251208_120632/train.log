@@ -1,0 +1,171 @@
+2025-12-08 12:06:32 | INFO | Config saved to ./logs/TimeLLM_ETTh1_TimeLLM-ETTh1-GPT2_20251208_120632/config.json
+2025-12-08 12:06:32 | INFO | Experiment Setting: long_term_forecast_ETTh1_512_96_TimeLLM_ETTh1_ftM_sl512_ll48_pl96_dm32_nh8_el2_dl1_df128_fc3_ebtimeF_Exp_0
+2025-12-08 12:06:32 | INFO | Training iteration: 1/1
+2025-12-08 12:07:29 | INFO | Epoch 001 | Iter 00100/1004 | Loss: 0.4828044 | Speed: 0.5511s/iter | ETA: 2h 17m
+2025-12-08 12:08:22 | INFO | Epoch 001 | Iter 00200/1004 | Loss: 0.3123443 | Speed: 0.5297s/iter | ETA: 2h 11m
+2025-12-08 12:09:10 | INFO | Epoch 001 | Iter 00300/1004 | Loss: 0.6584493 | Speed: 0.4856s/iter | ETA: 1h 59m
+2025-12-08 12:10:06 | INFO | Epoch 001 | Iter 00400/1004 | Loss: 0.4381938 | Speed: 0.5597s/iter | ETA: 2h 16m
+2025-12-08 12:11:00 | INFO | Epoch 001 | Iter 00500/1004 | Loss: 0.3586454 | Speed: 0.5393s/iter | ETA: 2h 10m
+2025-12-08 12:11:44 | INFO | Epoch 001 | Iter 00600/1004 | Loss: 0.3704472 | Speed: 0.4374s/iter | ETA: 1h 45m
+2025-12-08 12:12:38 | INFO | Epoch 001 | Iter 00700/1004 | Loss: 0.4169327 | Speed: 0.5418s/iter | ETA: 2h 9m
+2025-12-08 12:13:32 | INFO | Epoch 001 | Iter 00800/1004 | Loss: 0.4306999 | Speed: 0.5419s/iter | ETA: 2h 8m
+2025-12-08 12:14:25 | INFO | Epoch 001 | Iter 00900/1004 | Loss: 0.5218136 | Speed: 0.5264s/iter | ETA: 2h 4m
+2025-12-08 12:15:10 | INFO | Epoch 001 | Iter 01000/1004 | Loss: 0.4304740 | Speed: 0.4485s/iter | ETA: 1h 45m
+2025-12-08 12:18:30 | INFO | Epoch 001 | Train Loss: 0.4359235 | Vali Loss: 0.7879565 | Test Loss: 0.3976603 | MAE: 0.4177058 | Time: 518.04s | LR: 4.00e-04
+2025-12-08 12:19:25 | INFO | Epoch 002 | Iter 00100/1004 | Loss: 0.4332895 | Speed: 2.5550s/iter | ETA: 9h 54m
+2025-12-08 12:20:10 | INFO | Epoch 002 | Iter 00200/1004 | Loss: 0.3928016 | Speed: 0.4529s/iter | ETA: 1h 44m
+2025-12-08 12:21:02 | INFO | Epoch 002 | Iter 00300/1004 | Loss: 0.3532136 | Speed: 0.5189s/iter | ETA: 1h 58m
+2025-12-08 12:21:57 | INFO | Epoch 002 | Iter 00400/1004 | Loss: 0.4174447 | Speed: 0.5426s/iter | ETA: 2h 3m
+2025-12-08 12:22:50 | INFO | Epoch 002 | Iter 00500/1004 | Loss: 0.3431946 | Speed: 0.5309s/iter | ETA: 1h 59m
+2025-12-08 12:23:33 | INFO | Epoch 002 | Iter 00600/1004 | Loss: 0.4430478 | Speed: 0.4299s/iter | ETA: 1h 36m
+2025-12-08 12:24:27 | INFO | Epoch 002 | Iter 00700/1004 | Loss: 0.4061848 | Speed: 0.5425s/iter | ETA: 2h 0m
+2025-12-08 12:25:21 | INFO | Epoch 002 | Iter 00800/1004 | Loss: 0.3939354 | Speed: 0.5412s/iter | ETA: 1h 59m
+2025-12-08 12:26:11 | INFO | Epoch 002 | Iter 00900/1004 | Loss: 0.3211765 | Speed: 0.5046s/iter | ETA: 1h 50m
+2025-12-08 12:26:58 | INFO | Epoch 002 | Iter 01000/1004 | Loss: 0.3114328 | Speed: 0.4653s/iter | ETA: 1h 41m
+2025-12-08 12:30:07 | INFO | Epoch 002 | Train Loss: 0.3922237 | Vali Loss: 0.7712418 | Test Loss: 0.3988985 | MAE: 0.4185033 | Time: 509.22s | LR: 4.00e-04
+2025-12-08 12:31:04 | INFO | Epoch 003 | Iter 00100/1004 | Loss: 0.4110686 | Speed: 2.4553s/iter | ETA: 8h 50m
+2025-12-08 12:31:49 | INFO | Epoch 003 | Iter 00200/1004 | Loss: 0.5282414 | Speed: 0.4557s/iter | ETA: 1h 37m
+2025-12-08 12:32:41 | INFO | Epoch 003 | Iter 00300/1004 | Loss: 0.3588641 | Speed: 0.5170s/iter | ETA: 1h 49m
+2025-12-08 12:33:35 | INFO | Epoch 003 | Iter 00400/1004 | Loss: 0.3311362 | Speed: 0.5426s/iter | ETA: 1h 54m
+2025-12-08 12:34:28 | INFO | Epoch 003 | Iter 00500/1004 | Loss: 0.4866498 | Speed: 0.5310s/iter | ETA: 1h 51m
+2025-12-08 12:35:11 | INFO | Epoch 003 | Iter 00600/1004 | Loss: 0.3161477 | Speed: 0.4299s/iter | ETA: 1h 29m
+2025-12-08 12:36:05 | INFO | Epoch 003 | Iter 00700/1004 | Loss: 0.4632129 | Speed: 0.5415s/iter | ETA: 1h 51m
+2025-12-08 12:37:00 | INFO | Epoch 003 | Iter 00800/1004 | Loss: 0.2927758 | Speed: 0.5426s/iter | ETA: 1h 50m
+2025-12-08 12:37:50 | INFO | Epoch 003 | Iter 00900/1004 | Loss: 0.2862946 | Speed: 0.5057s/iter | ETA: 1h 42m
+2025-12-08 12:38:37 | INFO | Epoch 003 | Iter 01000/1004 | Loss: 0.5098671 | Speed: 0.4653s/iter | ETA: 1h 33m
+2025-12-08 12:41:45 | INFO | Epoch 003 | Train Loss: 0.3806879 | Vali Loss: 0.8113388 | Test Loss: 0.3896617 | MAE: 0.4133073 | Time: 509.51s | LR: 2.00e-04
+2025-12-08 12:42:39 | INFO | Epoch 004 | Iter 00100/1004 | Loss: 0.4389234 | Speed: 2.4214s/iter | ETA: 8h 2m
+2025-12-08 12:43:28 | INFO | Epoch 004 | Iter 00200/1004 | Loss: 0.3681532 | Speed: 0.4910s/iter | ETA: 1h 36m
+2025-12-08 12:44:16 | INFO | Epoch 004 | Iter 00300/1004 | Loss: 0.3813165 | Speed: 0.4816s/iter | ETA: 1h 34m
+2025-12-08 12:45:10 | INFO | Epoch 004 | Iter 00400/1004 | Loss: 0.2682936 | Speed: 0.5425s/iter | ETA: 1h 45m
+2025-12-08 12:46:04 | INFO | Epoch 004 | Iter 00500/1004 | Loss: 0.3185143 | Speed: 0.5327s/iter | ETA: 1h 42m
+2025-12-08 12:46:47 | INFO | Epoch 004 | Iter 00600/1004 | Loss: 0.4453926 | Speed: 0.4303s/iter | ETA: 1h 22m
+2025-12-08 12:47:41 | INFO | Epoch 004 | Iter 00700/1004 | Loss: 0.2761220 | Speed: 0.5415s/iter | ETA: 1h 42m
+2025-12-08 12:48:35 | INFO | Epoch 004 | Iter 00800/1004 | Loss: 0.2810308 | Speed: 0.5421s/iter | ETA: 1h 41m
+2025-12-08 12:49:27 | INFO | Epoch 004 | Iter 00900/1004 | Loss: 0.3349210 | Speed: 0.5224s/iter | ETA: 1h 37m
+2025-12-08 12:50:12 | INFO | Epoch 004 | Iter 01000/1004 | Loss: 0.2829731 | Speed: 0.4493s/iter | ETA: 1h 22m
+2025-12-08 12:53:21 | INFO | Epoch 004 | Train Loss: 0.3701011 | Vali Loss: 0.8294481 | Test Loss: 0.3916641 | MAE: 0.4133391 | Time: 509.27s | LR: 1.00e-04
+2025-12-08 12:54:15 | INFO | Epoch 005 | Iter 00100/1004 | Loss: 0.5858537 | Speed: 2.4269s/iter | ETA: 7h 22m
+2025-12-08 12:55:07 | INFO | Epoch 005 | Iter 00200/1004 | Loss: 0.4124431 | Speed: 0.5180s/iter | ETA: 1h 33m
+2025-12-08 12:55:52 | INFO | Epoch 005 | Iter 00300/1004 | Loss: 0.4940761 | Speed: 0.4523s/iter | ETA: 1h 20m
+2025-12-08 12:56:46 | INFO | Epoch 005 | Iter 00400/1004 | Loss: 0.3298852 | Speed: 0.5427s/iter | ETA: 1h 36m
+2025-12-08 12:57:40 | INFO | Epoch 005 | Iter 00500/1004 | Loss: 0.3703405 | Speed: 0.5363s/iter | ETA: 1h 34m
+2025-12-08 12:58:23 | INFO | Epoch 005 | Iter 00600/1004 | Loss: 0.5010665 | Speed: 0.4364s/iter | ETA: 1h 15m
+2025-12-08 12:59:18 | INFO | Epoch 005 | Iter 00700/1004 | Loss: 0.3398710 | Speed: 0.5422s/iter | ETA: 1h 33m
+2025-12-08 13:00:12 | INFO | Epoch 005 | Iter 00800/1004 | Loss: 0.2808123 | Speed: 0.5427s/iter | ETA: 1h 32m
+2025-12-08 13:01:04 | INFO | Epoch 005 | Iter 00900/1004 | Loss: 0.2952520 | Speed: 0.5238s/iter | ETA: 1h 28m
+2025-12-08 13:01:49 | INFO | Epoch 005 | Iter 01000/1004 | Loss: 0.3839443 | Speed: 0.4492s/iter | ETA: 1h 15m
+2025-12-08 13:04:58 | INFO | Epoch 005 | Train Loss: 0.3618278 | Vali Loss: 0.7662048 | Test Loss: 0.3866355 | MAE: 0.4121465 | Time: 510.66s | LR: 5.00e-05
+2025-12-08 13:05:55 | INFO | Epoch 006 | Iter 00100/1004 | Loss: 0.4165080 | Speed: 2.4562s/iter | ETA: 6h 46m
+2025-12-08 13:06:45 | INFO | Epoch 006 | Iter 00200/1004 | Loss: 0.2815172 | Speed: 0.5047s/iter | ETA: 1h 22m
+2025-12-08 13:07:31 | INFO | Epoch 006 | Iter 00300/1004 | Loss: 0.2785737 | Speed: 0.4523s/iter | ETA: 1h 13m
+2025-12-08 13:08:25 | INFO | Epoch 006 | Iter 00400/1004 | Loss: 0.4390900 | Speed: 0.5428s/iter | ETA: 1h 27m
+2025-12-08 13:09:18 | INFO | Epoch 006 | Iter 00500/1004 | Loss: 0.3471119 | Speed: 0.5362s/iter | ETA: 1h 25m
+2025-12-08 13:10:02 | INFO | Epoch 006 | Iter 00600/1004 | Loss: 0.3538358 | Speed: 0.4360s/iter | ETA: 1h 8m
+2025-12-08 13:10:56 | INFO | Epoch 006 | Iter 00700/1004 | Loss: 0.6453351 | Speed: 0.5416s/iter | ETA: 1h 24m
+2025-12-08 13:11:50 | INFO | Epoch 006 | Iter 00800/1004 | Loss: 0.4139956 | Speed: 0.5426s/iter | ETA: 1h 23m
+2025-12-08 13:12:43 | INFO | Epoch 006 | Iter 00900/1004 | Loss: 0.3904940 | Speed: 0.5235s/iter | ETA: 1h 19m
+2025-12-08 13:13:27 | INFO | Epoch 006 | Iter 01000/1004 | Loss: 0.3145364 | Speed: 0.4373s/iter | ETA: 1h 5m
+2025-12-08 13:16:34 | INFO | Epoch 006 | Train Loss: 0.3567657 | Vali Loss: 0.7821561 | Test Loss: 0.3886875 | MAE: 0.4126320 | Time: 508.05s | LR: 2.50e-05
+2025-12-08 13:17:28 | INFO | Epoch 007 | Iter 00100/1004 | Loss: 0.2846540 | Speed: 2.4126s/iter | ETA: 5h 59m
+2025-12-08 13:18:20 | INFO | Epoch 007 | Iter 00200/1004 | Loss: 0.3662564 | Speed: 0.5249s/iter | ETA: 1h 17m
+2025-12-08 13:19:04 | INFO | Epoch 007 | Iter 00300/1004 | Loss: 0.3300042 | Speed: 0.4384s/iter | ETA: 1h 3m
+2025-12-08 13:19:58 | INFO | Epoch 007 | Iter 00400/1004 | Loss: 0.5000988 | Speed: 0.5421s/iter | ETA: 1h 18m
+2025-12-08 13:20:52 | INFO | Epoch 007 | Iter 00500/1004 | Loss: 0.2885537 | Speed: 0.5403s/iter | ETA: 1h 16m
+2025-12-08 13:21:36 | INFO | Epoch 007 | Iter 00600/1004 | Loss: 0.3672385 | Speed: 0.4313s/iter | ETA: 1h 0m
+2025-12-08 13:22:30 | INFO | Epoch 007 | Iter 00700/1004 | Loss: 0.3602880 | Speed: 0.5428s/iter | ETA: 1h 15m
+2025-12-08 13:23:24 | INFO | Epoch 007 | Iter 00800/1004 | Loss: 0.3112559 | Speed: 0.5425s/iter | ETA: 1h 14m
+2025-12-08 13:24:17 | INFO | Epoch 007 | Iter 00900/1004 | Loss: 0.2949304 | Speed: 0.5278s/iter | ETA: 1h 11m
+2025-12-08 13:25:01 | INFO | Epoch 007 | Iter 01000/1004 | Loss: 0.2735066 | Speed: 0.4419s/iter | ETA: 0h 59m
+2025-12-08 13:28:09 | INFO | Epoch 007 | Train Loss: 0.3530681 | Vali Loss: 0.8014823 | Test Loss: 0.3895575 | MAE: 0.4130556 | Time: 509.56s | LR: 1.25e-05
+2025-12-08 13:29:04 | INFO | Epoch 008 | Iter 00100/1004 | Loss: 0.3439981 | Speed: 2.4261s/iter | ETA: 5h 20m
+2025-12-08 13:29:56 | INFO | Epoch 008 | Iter 00200/1004 | Loss: 0.3348397 | Speed: 0.5263s/iter | ETA: 1h 8m
+2025-12-08 13:30:41 | INFO | Epoch 008 | Iter 00300/1004 | Loss: 0.4087107 | Speed: 0.4463s/iter | ETA: 0h 57m
+2025-12-08 13:31:35 | INFO | Epoch 008 | Iter 00400/1004 | Loss: 0.3693295 | Speed: 0.5411s/iter | ETA: 1h 8m
+2025-12-08 13:32:29 | INFO | Epoch 008 | Iter 00500/1004 | Loss: 0.4054782 | Speed: 0.5426s/iter | ETA: 1h 8m
+2025-12-08 13:33:14 | INFO | Epoch 008 | Iter 00600/1004 | Loss: 0.3032959 | Speed: 0.4476s/iter | ETA: 0h 55m
+2025-12-08 13:34:07 | INFO | Epoch 008 | Iter 00700/1004 | Loss: 0.3027516 | Speed: 0.5255s/iter | ETA: 1h 4m
+2025-12-08 13:35:01 | INFO | Epoch 008 | Iter 00800/1004 | Loss: 0.3678277 | Speed: 0.5421s/iter | ETA: 1h 5m
+2025-12-08 13:35:54 | INFO | Epoch 008 | Iter 00900/1004 | Loss: 0.2986382 | Speed: 0.5302s/iter | ETA: 1h 3m
+2025-12-08 13:36:38 | INFO | Epoch 008 | Iter 01000/1004 | Loss: 0.2753112 | Speed: 0.4418s/iter | ETA: 0h 51m
+2025-12-08 13:39:47 | INFO | Epoch 008 | Train Loss: 0.3510858 | Vali Loss: 0.7970328 | Test Loss: 0.3876795 | MAE: 0.4117596 | Time: 510.65s | LR: 6.25e-06
+2025-12-08 13:40:41 | INFO | Epoch 009 | Iter 00100/1004 | Loss: 0.3808203 | Speed: 2.4300s/iter | ETA: 4h 40m
+2025-12-08 13:41:34 | INFO | Epoch 009 | Iter 00200/1004 | Loss: 0.3355245 | Speed: 0.5279s/iter | ETA: 1h 0m
+2025-12-08 13:42:18 | INFO | Epoch 009 | Iter 00300/1004 | Loss: 0.2855043 | Speed: 0.4435s/iter | ETA: 0h 49m
+2025-12-08 13:43:12 | INFO | Epoch 009 | Iter 00400/1004 | Loss: 0.3692627 | Speed: 0.5426s/iter | ETA: 0h 59m
+2025-12-08 13:44:07 | INFO | Epoch 009 | Iter 00500/1004 | Loss: 0.3217258 | Speed: 0.5416s/iter | ETA: 0h 58m
+2025-12-08 13:44:53 | INFO | Epoch 009 | Iter 00600/1004 | Loss: 0.4944129 | Speed: 0.4633s/iter | ETA: 0h 49m
+2025-12-08 13:45:44 | INFO | Epoch 009 | Iter 00700/1004 | Loss: 0.3371112 | Speed: 0.5105s/iter | ETA: 0h 53m
+2025-12-08 13:46:38 | INFO | Epoch 009 | Iter 00800/1004 | Loss: 0.4127317 | Speed: 0.5427s/iter | ETA: 0h 56m
+2025-12-08 13:47:31 | INFO | Epoch 009 | Iter 00900/1004 | Loss: 0.4525699 | Speed: 0.5305s/iter | ETA: 0h 54m
+2025-12-08 13:48:15 | INFO | Epoch 009 | Iter 01000/1004 | Loss: 0.2836114 | Speed: 0.4420s/iter | ETA: 0h 44m
+2025-12-08 13:51:22 | INFO | Epoch 009 | Train Loss: 0.3495915 | Vali Loss: 0.8005990 | Test Loss: 0.3884220 | MAE: 0.4122438 | Time: 510.77s | LR: 3.12e-06
+2025-12-08 13:52:16 | INFO | Epoch 010 | Iter 00100/1004 | Loss: 0.3217128 | Speed: 2.4092s/iter | ETA: 3h 57m
+2025-12-08 13:53:09 | INFO | Epoch 010 | Iter 00200/1004 | Loss: 0.3106339 | Speed: 0.5306s/iter | ETA: 0h 51m
+2025-12-08 13:53:54 | INFO | Epoch 010 | Iter 00300/1004 | Loss: 0.3081917 | Speed: 0.4420s/iter | ETA: 0h 42m
+2025-12-08 13:54:48 | INFO | Epoch 010 | Iter 00400/1004 | Loss: 0.3073745 | Speed: 0.5423s/iter | ETA: 0h 50m
+2025-12-08 13:55:42 | INFO | Epoch 010 | Iter 00500/1004 | Loss: 0.3133100 | Speed: 0.5399s/iter | ETA: 0h 49m
+2025-12-08 13:56:32 | INFO | Epoch 010 | Iter 00600/1004 | Loss: 0.4144598 | Speed: 0.4993s/iter | ETA: 0h 45m
+2025-12-08 13:57:19 | INFO | Epoch 010 | Iter 00700/1004 | Loss: 0.2254667 | Speed: 0.4733s/iter | ETA: 0h 42m
+2025-12-08 13:58:13 | INFO | Epoch 010 | Iter 00800/1004 | Loss: 0.5394128 | Speed: 0.5415s/iter | ETA: 0h 47m
+2025-12-08 13:59:07 | INFO | Epoch 010 | Iter 00900/1004 | Loss: 0.3358347 | Speed: 0.5347s/iter | ETA: 0h 45m
+2025-12-08 13:59:51 | INFO | Epoch 010 | Iter 01000/1004 | Loss: 0.3620362 | Speed: 0.4391s/iter | ETA: 0h 36m
+2025-12-08 14:02:59 | INFO | Epoch 010 | Train Loss: 0.3492035 | Vali Loss: 0.7981418 | Test Loss: 0.3885250 | MAE: 0.4123611 | Time: 510.64s | LR: 1.56e-06
+2025-12-08 14:03:53 | INFO | Epoch 011 | Iter 00100/1004 | Loss: 0.3340457 | Speed: 2.4285s/iter | ETA: 3h 19m
+2025-12-08 14:04:47 | INFO | Epoch 011 | Iter 00200/1004 | Loss: 0.3405840 | Speed: 0.5325s/iter | ETA: 0h 42m
+2025-12-08 14:05:31 | INFO | Epoch 011 | Iter 00300/1004 | Loss: 0.3179886 | Speed: 0.4402s/iter | ETA: 0h 34m
+2025-12-08 14:06:25 | INFO | Epoch 011 | Iter 00400/1004 | Loss: 0.3911022 | Speed: 0.5425s/iter | ETA: 0h 41m
+2025-12-08 14:07:19 | INFO | Epoch 011 | Iter 00500/1004 | Loss: 0.3211069 | Speed: 0.5413s/iter | ETA: 0h 40m
+2025-12-08 14:08:11 | INFO | Epoch 011 | Iter 00600/1004 | Loss: 0.2932317 | Speed: 0.5142s/iter | ETA: 0h 37m
+2025-12-08 14:08:57 | INFO | Epoch 011 | Iter 00700/1004 | Loss: 0.3202195 | Speed: 0.4601s/iter | ETA: 0h 33m
+2025-12-08 14:09:51 | INFO | Epoch 011 | Iter 00800/1004 | Loss: 0.3334084 | Speed: 0.5427s/iter | ETA: 0h 38m
+2025-12-08 14:10:44 | INFO | Epoch 011 | Iter 00900/1004 | Loss: 0.3978923 | Speed: 0.5354s/iter | ETA: 0h 36m
+2025-12-08 14:11:27 | INFO | Epoch 011 | Iter 01000/1004 | Loss: 0.2364234 | Speed: 0.4275s/iter | ETA: 0h 28m
+2025-12-08 14:14:36 | INFO | Epoch 011 | Train Loss: 0.3488299 | Vali Loss: 0.7971047 | Test Loss: 0.3884205 | MAE: 0.4123190 | Time: 509.92s | LR: 7.81e-07
+2025-12-08 14:15:30 | INFO | Epoch 012 | Iter 00100/1004 | Loss: 0.3396662 | Speed: 2.4267s/iter | ETA: 2h 38m
+2025-12-08 14:16:23 | INFO | Epoch 012 | Iter 00200/1004 | Loss: 0.2756327 | Speed: 0.5342s/iter | ETA: 0h 33m
+2025-12-08 14:17:06 | INFO | Epoch 012 | Iter 00300/1004 | Loss: 0.3165886 | Speed: 0.4266s/iter | ETA: 0h 26m
+2025-12-08 14:18:00 | INFO | Epoch 012 | Iter 00400/1004 | Loss: 0.2566298 | Speed: 0.5424s/iter | ETA: 0h 32m
+2025-12-08 14:18:54 | INFO | Epoch 012 | Iter 00500/1004 | Loss: 0.3117323 | Speed: 0.5426s/iter | ETA: 0h 31m
+2025-12-08 14:19:47 | INFO | Epoch 012 | Iter 00600/1004 | Loss: 0.3829847 | Speed: 0.5236s/iter | ETA: 0h 29m
+2025-12-08 14:20:31 | INFO | Epoch 012 | Iter 00700/1004 | Loss: 0.4416026 | Speed: 0.4396s/iter | ETA: 0h 24m
+2025-12-08 14:21:25 | INFO | Epoch 012 | Iter 00800/1004 | Loss: 0.3495295 | Speed: 0.5416s/iter | ETA: 0h 29m
+2025-12-08 14:22:19 | INFO | Epoch 012 | Iter 00900/1004 | Loss: 0.2852256 | Speed: 0.5397s/iter | ETA: 0h 28m
+2025-12-08 14:23:01 | INFO | Epoch 012 | Iter 01000/1004 | Loss: 0.3911793 | Speed: 0.4246s/iter | ETA: 0h 21m
+2025-12-08 14:26:10 | INFO | Epoch 012 | Train Loss: 0.3486926 | Vali Loss: 0.7985879 | Test Loss: 0.3883186 | MAE: 0.4122061 | Time: 507.68s | LR: 3.91e-07
+2025-12-08 14:27:04 | INFO | Epoch 013 | Iter 00100/1004 | Loss: 0.5067273 | Speed: 2.4303s/iter | ETA: 1h 57m
+2025-12-08 14:27:58 | INFO | Epoch 013 | Iter 00200/1004 | Loss: 0.2920845 | Speed: 0.5374s/iter | ETA: 0h 25m
+2025-12-08 14:28:41 | INFO | Epoch 013 | Iter 00300/1004 | Loss: 0.3661080 | Speed: 0.4333s/iter | ETA: 0h 19m
+2025-12-08 14:29:36 | INFO | Epoch 013 | Iter 00400/1004 | Loss: 0.3914857 | Speed: 0.5426s/iter | ETA: 0h 23m
+2025-12-08 14:30:30 | INFO | Epoch 013 | Iter 00500/1004 | Loss: 0.3236984 | Speed: 0.5425s/iter | ETA: 0h 22m
+2025-12-08 14:31:22 | INFO | Epoch 013 | Iter 00600/1004 | Loss: 0.3446355 | Speed: 0.5260s/iter | ETA: 0h 21m
+2025-12-08 14:32:07 | INFO | Epoch 013 | Iter 00700/1004 | Loss: 0.3757403 | Speed: 0.4453s/iter | ETA: 0h 17m
+2025-12-08 14:33:01 | INFO | Epoch 013 | Iter 00800/1004 | Loss: 0.3401434 | Speed: 0.5416s/iter | ETA: 0h 19m
+2025-12-08 14:33:55 | INFO | Epoch 013 | Iter 00900/1004 | Loss: 0.2911792 | Speed: 0.5402s/iter | ETA: 0h 19m
+2025-12-08 14:34:39 | INFO | Epoch 013 | Iter 01000/1004 | Loss: 0.2834290 | Speed: 0.4386s/iter | ETA: 0h 14m
+2025-12-08 14:37:48 | INFO | Epoch 013 | Train Loss: 0.3480702 | Vali Loss: 0.7990174 | Test Loss: 0.3883140 | MAE: 0.4121873 | Time: 510.14s | LR: 1.95e-07
+2025-12-08 14:38:42 | INFO | Epoch 014 | Iter 00100/1004 | Loss: 0.3567917 | Speed: 2.4267s/iter | ETA: 1h 17m
+2025-12-08 14:39:36 | INFO | Epoch 014 | Iter 00200/1004 | Loss: 0.3325927 | Speed: 0.5387s/iter | ETA: 0h 16m
+2025-12-08 14:40:19 | INFO | Epoch 014 | Iter 00300/1004 | Loss: 0.2955883 | Speed: 0.4324s/iter | ETA: 0h 12m
+2025-12-08 14:41:13 | INFO | Epoch 014 | Iter 00400/1004 | Loss: 0.3164343 | Speed: 0.5425s/iter | ETA: 0h 14m
+2025-12-08 14:42:07 | INFO | Epoch 014 | Iter 00500/1004 | Loss: 0.3876877 | Speed: 0.5425s/iter | ETA: 0h 13m
+2025-12-08 14:43:00 | INFO | Epoch 014 | Iter 00600/1004 | Loss: 0.2668572 | Speed: 0.5263s/iter | ETA: 0h 12m
+2025-12-08 14:43:44 | INFO | Epoch 014 | Iter 00700/1004 | Loss: 0.2917600 | Speed: 0.4451s/iter | ETA: 0h 9m
+2025-12-08 14:44:39 | INFO | Epoch 014 | Iter 00800/1004 | Loss: 0.3305965 | Speed: 0.5423s/iter | ETA: 0h 10m
+2025-12-08 14:45:33 | INFO | Epoch 014 | Iter 00900/1004 | Loss: 0.3136939 | Speed: 0.5424s/iter | ETA: 0h 10m
+2025-12-08 14:46:18 | INFO | Epoch 014 | Iter 01000/1004 | Loss: 0.4507061 | Speed: 0.4488s/iter | ETA: 0h 7m
+2025-12-08 14:49:25 | INFO | Epoch 014 | Train Loss: 0.3490069 | Vali Loss: 0.7994660 | Test Loss: 0.3883613 | MAE: 0.4122099 | Time: 511.12s | LR: 9.77e-08
+2025-12-08 14:50:19 | INFO | Epoch 015 | Iter 00100/1004 | Loss: 0.3946947 | Speed: 2.4135s/iter | ETA: 0h 36m
+2025-12-08 14:51:13 | INFO | Epoch 015 | Iter 00200/1004 | Loss: 0.3952799 | Speed: 0.5401s/iter | ETA: 0h 7m
+2025-12-08 14:51:56 | INFO | Epoch 015 | Iter 00300/1004 | Loss: 0.4205499 | Speed: 0.4315s/iter | ETA: 0h 5m
+2025-12-08 14:52:51 | INFO | Epoch 015 | Iter 00400/1004 | Loss: 0.2768516 | Speed: 0.5420s/iter | ETA: 0h 5m
+2025-12-08 14:53:45 | INFO | Epoch 015 | Iter 00500/1004 | Loss: 0.3892477 | Speed: 0.5424s/iter | ETA: 0h 4m
+2025-12-08 14:54:38 | INFO | Epoch 015 | Iter 00600/1004 | Loss: 0.3109951 | Speed: 0.5281s/iter | ETA: 0h 3m
+2025-12-08 14:55:22 | INFO | Epoch 015 | Iter 00700/1004 | Loss: 0.4041857 | Speed: 0.4431s/iter | ETA: 0h 2m
+2025-12-08 14:56:16 | INFO | Epoch 015 | Iter 00800/1004 | Loss: 0.2755752 | Speed: 0.5425s/iter | ETA: 0h 1m
+2025-12-08 14:57:10 | INFO | Epoch 015 | Iter 00900/1004 | Loss: 0.2468349 | Speed: 0.5416s/iter | ETA: 0h 0m
+2025-12-08 14:57:57 | INFO | Epoch 015 | Iter 01000/1004 | Loss: 0.3879840 | Speed: 0.4629s/iter | ETA: 0h 0m
+2025-12-08 15:01:02 | INFO | Epoch 015 | Train Loss: 0.3482283 | Vali Loss: 0.7993671 | Test Loss: 0.3883659 | MAE: 0.4122009 | Time: 512.38s | LR: 4.88e-08
+2025-12-08 15:01:02 | INFO | Early stopping triggered
+2025-12-08 15:01:02 | INFO | Results saved to ./logs/TimeLLM_ETTh1_TimeLLM-ETTh1-GPT2_20251208_120632/results.json
+2025-12-08 15:01:02 | INFO | Experiment logs directory: ./logs/TimeLLM_ETTh1_TimeLLM-ETTh1-GPT2_20251208_120632
